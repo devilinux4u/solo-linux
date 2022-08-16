@@ -1,0 +1,27 @@
+{
+  "name": "solo",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "nodemon index.js"
+  },
+  "author": "solo linux",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "countapi-js": "^1.0.2",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.1",
+    "node-fetch": "^2.6.7",
+    "node-ip-details": "^0.0.7",
+    "nodemailer": "^6.7.5",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}

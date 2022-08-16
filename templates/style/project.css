@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap');
+
+.project {
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+.cards {
+    padding: 20px 0px 0 0px;
+}
+
+.row1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.flip-card{
+    background-color: transparent;
+    width: 400px;
+    height: 220px;
+    perspective: 1000px;
+    padding: 0 0px 20px 30px;
+    float: left;
+}
+
+.cards img{
+    display: flex;
+    justify-content: center;
+    padding: 0 30px 20px 0px;
+    width: 400px;
+    height: 220px;    
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(114deg, rgba(255, 255, 255, 1) 0%, rgba(135, 255, 187, 1) 100%);
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+    padding: 10px 5px 0 5px;
+}
+
+.cards h2{ margin: 10px 0 5px 0;}
+.cards p{font-size: 18px;}
+.cards a {text-decoration: none;}
+.links{margin: 20px 0 0 0;}
+.links p{
+    color: rgb(11, 121, 165);
+    font-size: 20px;
+}
+.links p:hover{
+    color: rgb(255, 6, 122);
+}
+
+.pup{
+    padding: 80px 0 0 0;
+}
+
+.pup .lessi, .pup .morei{
+    text-align: center;
+    padding: 10px 0 0 0;
+    font-size: 20px;
+    font-family: "IBM Plex Mono";
+    font-weight: 600;
+}
+
+.pup .spec{
+    color: rgb(226, 38, 38);
+}
+
+.not{
+    text-align: center;  
+    font-family: "IBM Plex Mono";
+    font-weight: 700;
+    color: rgba(174, 58, 241, 0.877); 
+    padding: 0 0 0 10px;
+}
+
+@media screen and (max-width: 450px){
+    
+    .flip-card{
+        width: 350px;
+        height: 200px;
+        padding: 0 0px 10px 10px;
+    }
+
+    .cards img{
+        width: 350px;
+        height: 200px;  
+        padding: 0 10px 10px 0px;  
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .project{height: auto;}
+    .cards {
+        padding: 20px 10px 0 10px;
+    }
+    
+    .row1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+    .cards p{font-size: 15px;}
+}
+
+
+@media screen and (max-width: 1000px) and (min-width: 768px){
+
+    .project{height: auto;}
+    
+    .row1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
+    .cards {
+        padding: 20px 30px 0 30px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) and (min-width: 1000px){
+    .row1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
+    .cards {
+        padding: 20px 30px 0 80px;
+    }
+
+    .project{height: auto;}
+}

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.top {
+    height: 100vh;
+    overflow-x: hidden;
+}
+.top::-webkit-scrollbar {
+    display: none;
+  }
+
+.nav ul {
+    list-style: none;
+    margin: 20px 0 0 0px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(255, 94, 14);
+    height: 1.5cm;
+    width: 9cm;
+    text-align: center;
+    z-index: 99;
+    position: fixed;
+}
+
+.nav li {
+    display: inline-block;
+    padding: 3px 3px 0px 3px;
+    margin: 15px 10px auto auto;
+    color: azure;
+}
+
+.nav li:hover {
+    border-bottom: 2px solid rgb(2, 2, 2);
+}
+
+.p {
+    width: 18cm;
+    height: calc(100vh - 210px);
+    float: right;
+    margin: 65px 30px 0 0;
+    font-size: 18px;
+    background-color: rgb(255, 94, 14);
+    padding: 10px 30px 0 30px;
+    color: beige;
+    clear: right;
+    border-start-start-radius: 20px;
+    font-family: "IBM Plex Mono";
+    font-weight: 600;
+}
+
+.p .solo {
+    font-family: "caveat";
+}
+
+.p .linux {
+    font-family: "Amatic SC";
+}
+ .p .highl{
+    color: black;
+ }
+
+.solo,
+.linux {
+    font-size: 100px;
+    line-height: 150px;
+    font-weight: 500;
+}
+
+.media {
+    clear: left;
+    float: right;
+    margin: 60px 10px 0 0;
+    padding: 0 50px 0 0;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+}
+
+.media #oo {
+    color: rgba(0, 0, 0, 0.507);
+}
+
+.media a {
+    text-decoration: none;
+    color: darksalmon;
+}
+
+.media a:hover {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    color: rgb(69, 171, 179);
+}
+.media a:active{
+    color: rgb(69, 171, 179)
+}
+
+nav a {
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 480px) {
+    .top{height: auto;}
+    .media {
+        margin: 100px 5px 0 0;
+        padding: 0 5px 0 0;
+    }
+    .media a:hover {
+        text-shadow: none;
+        color: darksalmon;
+    }
+
+    .p {
+        font-size: 15px;
+        margin: 40px 5px 0 5px;
+        padding: 0 20px 20px 30px;
+        max-width: calc(100vw - 30px);
+        height: calc(100vh - 225px);
+    }
+
+    .solo,
+    .linux {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px){
+    .media {
+        margin: 120px 5px 0 0;
+    }
+
+    .p {
+        font-size: 18px;
+        margin: 40px 5px 0 5px;
+        padding: 0 20px 20px 30px;
+        max-width: calc(100vw - 30px);
+        height: calc(100vh - 225px);
+    }
+}

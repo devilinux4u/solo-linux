@@ -1,0 +1,15 @@
+.all-container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.top, .project, .contact{
+    scroll-snap-align: start;
+}
+
+@media screen and (max-width: 1000px) {
+    .all-container{
+        scroll-snap-type: y proximity;
+    }
+}

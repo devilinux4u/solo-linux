@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.top .content{
+    margin: 5px 0 0 30px;
+    float: left;
+    padding: 0;
+}
+
+.tagcloud{
+    font-family: 'Poppins', sans-serif;  
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+}
+
+.tagcloud--item:hover {
+    color: rgb(245, 74, 7);
+}
+
+@media screen and (max-width: 480px){
+	.top .content{
+        margin: 0 0 0 -40px;
+    } 
+
+    .tagcloud{
+        font-size: 15px;
+        color: rgb(6, 155, 255);
+    }
+}
+
+
+@media screen and (max-width: 768px) and (min-width: 480px){
+    .top .content{
+        margin: 0 0 0 calc(100vw - 90%);
+    } 
+}
+
+@media screen and (max-width: 1240px) and (min-width: 900px){
+    .top .content{
+        margin: 0 0 0 calc(100vw - 70%);
+    } 
+}
+
+@media screen and (max-width: 900px) and (min-width: 768px){
+    .top .content{
+        margin: 0 0 0 calc(100vw - 80%);
+    } 
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solo.linux- login</title>
+</head>
+
+<style>
+    .form {
+        text-align: left;
+        margin: 30px auto 0 auto;
+        max-width: 450px;
+        max-height: auto;
+        padding: 0 30px 0 30px;
+        display: grid;
+    }
+
+    .all {
+        margin: 10px 0;
+        border-bottom: 2px solid #adadad;
+        color: rgb(0, 0, 0);
+    }
+
+    input {
+        width: 100%;
+        height: 40px;
+        margin: 0 5px 0 5px;
+        font-size: 16px;
+        border: none;
+        background: none;
+        outline: none;
+    }
+
+
+    form #submit {
+        background-image: linear-gradient(to right, #3d3d3d 0%, #f525e3 51%, #0acec4 100%);
+        max-width: 150px;
+        margin: 10px 0 10px 0;
+        padding: 10px 18px 10px 18px;
+        font-size: 16px;
+        font-weight: 600;
+        outline: none;
+        color: #ffffff;
+        background-color: #00ff9e;
+        background-size: 200% auto;
+        box-shadow: 0 0 2px #eee;
+        float: right;
+    }
+
+    form #submit:hover {
+        background-image: linear-gradient(to right, #1eb3d8 0%, #c025d4 51%, #d31bda 100%);
+        color: #000000;
+        font-size: 18px;
+    }
+
+    form #submit:active {
+        max-width: 140px;
+    }
+
+
+    .all:hover {
+        border-bottom: 3px solid #000000;
+    }
+
+    .all:focus {
+        border-bottom: 3px solid rgb(88, 243, 235);
+    }
+
+    .all:focus::placeholder {
+        color: transparent;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    p{
+        text-align: center;
+        color: rgb(255, 0, 0);
+        font-size: 30px;
+    }
+</style>
+
+<body>
+
+    <h3>Login to view Website's Activity</h3>
+
+    <div class="form">
+        <form action="/log" method="post">
+            <input class="all" type="tetx" name="user" placeholder="Username" autocomplete="off" required />
+            <input class="all" type="password" name="password" placeholder="Password" autocomplete="off" required />
+            <input type="submit" name="Login" id="submit">
+        </form>
+    </div>
+
+    <%if(locals.data=='no' ){%>
+        <p>Invalid Login Data</p>
+        <%}%>
+
+</body>
+
+</html>
