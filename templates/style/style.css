@@ -1,7 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: caveat_rg;
+  src: url(../fonts/caveat-regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: caveat_bold;
+  src: url(../fonts/caveat-bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
 *,
 *::after,
 *::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: caveat_rg;
+}
+
+a {
+  text-decoration: none;
+}
+
+#nav .nav__container {
+  width: 5%;
+  background: #ff7a00;
+  padding: 2rem 0.8rem;
+  border-radius: 8rem;
+  position: fixed;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  z-index: 9;
+}
+#nav .nav__container__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  row-gap: 5rem;
+}
+#nav .nav__container__grid__element__image {
+  max-width: 100%;
+}
+#nav .nav__container__grid__element__image .img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
