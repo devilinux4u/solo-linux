@@ -1,237 +1,326 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>solo.linux | Raj Chaulagain</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/a089deb4c5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet" href="style/clous.css">
-    <link rel="stylesheet" href="style/project.css">
-    <link rel="stylesheet" href="style/contact.css">
-    <link rel="stylesheet" href="style/snap.css">
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-        data-id="solo.linux" data-description="Support me on Buy me a coffee!"
-        data-message="Thanks for a trip to my portfolio" data-color="#5F7FFF" data-position="Right" data-x_margin="18"
-        data-y_margin="18"></script>
-</head>
-
-<body>
-    <div class="all-container">
-
+<%- include("./includes/head.ejs") %> 
+  <body>
+    <nav id="nav">
+      <div class="nav__container">
+        <div class="nav__container__grid">
+          <div class="nav__container__grid__element">
+            <div class="nav__container__grid__element__image">
+              <img
+                src="https://img.icons8.com/fluency-systems-regular/144/F5F5DC/home.png"
+                alt="home icon"
+                class="img"
+              />
+            </div>
+          </div>
+          <div class="nav__container__grid__element">
+            <div class="nav__container__grid__element__image">
+              <img
+                src="https://img.icons8.com/ios/100/000000/project.png"
+                alt="home icon"
+                class="img"
+              />
+            </div>
+          </div>
+          <div class="nav__container__grid__element">
+            <div class="nav__container__grid__element__image">
+              <img
+                src="https://img.icons8.com/fluency-systems-regular/96/000000/contact-card.png"
+                alt="home icon"
+                class="img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="all-container">
         <div class="top" id="top">
-            <div class="nav">
-                <nav>
-                    <ul>
-                        <a href="#top">
-                            <li>Home</li>
-                        </a>
-                        <a href="#2">
-                            <li>Projects</li>
-                        </a>
-                        <a href="#3">
-                            <li>Contact</li>
-                        </a>
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="media">
-                <p id="oo"><a href="/login"><i class="fa-solid fa-copyright"></i> Raj chaulagain</a></p>
-                <a href="https://www.facebook.com/solo.linux4u/" target="_blank">
-                    <p><i class="fa-brands fa-facebook"></i> facebook/solo.linux4u/</p>
+          <div class="nav">
+            <nav>
+              <ul>
+                <a href="#top">
+                  <li>Home</li>
                 </a>
-                <a href="https://www.instagram.com/raj.3__/" target="_blank">
-                    <p><i class="fa-brands fa-instagram"></i> instagram/raj.3__/</p>
+                <a href="#2">
+                  <li>Projects</li>
                 </a>
-                <a href="https://github.com/sololinux" target="_blank">
-                    <p><i class="fa-brands fa-github"></i> github/sololinux</p>
+                <a href="#3">
+                  <li>Contact</li>
                 </a>
-            </div>
-
-
-            <div class="main">
-                <h1 style="display: none">solo solo solo solo solo solo solo solo solo</h1>
-                <p class="p"><span class="solo">Solo </span><span class="linux">Linux</span><br>
-                    Hey,<br><br>
-                    <i class="fa-solid fa-arrow-right"></i> I'm Solo (aka. Raj).<br>
-                    <i class="fa-solid fa-arrow-right"></i> and I am learning to code, <br>
-                    <i class="fa-solid fa-arrow-right"></i> insanely, intrested in Cyber Security, <br>
-                    <i class="fa-solid fa-arrow-right"></i> dreaming to join Anonymous one day.. hehe <br>
-                    <i class="fa-solid fa-arrow-right"></i> I like Backend programming, <br>
-                    <i class="fa-solid fa-arrow-right"></i> but, <span class="highl">not so good in Frontend</span>.
-                </p>
-            </div>
-            <div class="content"></div>
+              </ul>
+            </nav>
+          </div>
         </div>
+      </div> -->
+    </nav>
 
-
-
-
-
-        <div class="project" id="2">
-
-            <div class="pup">
-                <p class="lessi">These are the projects I have done <span class="spec">Previously.</span></p>
-                <p class="morei"><span class="spec">Tap/Hover</span> to get details about them</p>
-            </div>
-
-            <div class="cards">
-                <div class="row1">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="img/solo-mail.png" alt="Solo Mail">
-                            </div>
-                            <div class="flip-card-back">
-                                <h2>Anonymous Mail sender</h2>
-                                <p>Sends anonymous mail and multimails</p>
-                                <p>Webapp made using node.js</p>
-                                <div class="links">
-                                    <a href="https://solomail.herokuapp.com" target="_blank">
-                                        <p><i class="fa-brands fa-chrome"></i> Visit the Website</p>
-                                    </a>
-                                    <a href="https://github.com/sololinux/soloMail" target="_blank">
-                                        <p><i class="fa-brands fa-github"></i> Go to Github repo</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="img/solo-login.png" alt="Solo Login">
-                            </div>
-                            <div class="flip-card-back">
-                                <h2>Login/Signup authentication</h2>
-                                <p>Simple login/signup webapp with email verification and password hashing</p>
-                                <p>Webapp made using node.js and mongodb</p>
-                                <div class="links">
-                                    <a href="https://solologin.herokuapp.com" target="_blank">
-                                        <p><i class="fa-brands fa-chrome"></i> Visit the Website</p>
-                                    </a>
-                                    <a href="https://github.com/sololinux/soloLogin" target="_blank">
-                                        <p><i class="fa-brands fa-github"></i> Go to Github repo</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="img/bash-arch.png" alt="Bash-treminal">
-                            </div>
-                            <div class="flip-card-back">
-                                <h2>Linux terminal config</h2>
-                                <p>Cool and nice looking linux terminal design</p>
-                                <p>.bashrc made with bash</p>
-                                <div class="links">
-                                    <a href="https://github.com/sololinux/.bashrc" target="_blank">
-                                        <p><i class="fa-brands fa-github"></i> Go to Github repo</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- <div class="row2"> -->
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="img/discord-bot.png" alt="Discord bot">
-                            </div>
-                            <div class="flip-card-back">
-                                <h2>Discord Bot</h2>
-                                <p>Simple discord meme and joke bot</p>
-                                <p>Made using python</p>
-                                <div class="links">
-                                    <a href="https://discord.com/oauth2/authorize?client_id=947876744965271582&scope=bot"
-                                        target="_blank">
-                                        <p><i class="fa-brands fa-discord"></i> Get the bot in your server</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="img/ig.png" alt="Clone">
-                            </div>
-                            <div class="flip-card-back">
-                                <h2>InstaPost scraper</h2>
-                                <p>Fetches instagram posts and views in html insta clone using Basic Display Api. </p>
-                                <p>Webapp made using node.js and Display Api</p>
-                                <div class="links">
-                                    <a href="https://github.com/sololinux/getInstaFeed" target="_blank">
-                                        <p><i class="fa-brands fa-github"></i> Go to Github repo</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="not">
-                <p>Some of the project may not be working as I don't have time to maintain them.. solo is bg</p>
-            </div>
-
-        </div>
-
-
-
-        <div class="contact" id="3">
-
-            <div class="clip">
-                <p class="tag">Want to contact me, Leave a message</p>
-                <div class="form">
-                    <form id="smsg">
-                        <input type="text" name="name" placeholder="Name" class="all" id="name" autocomplete="off"
-                            required>
-                        <br>
-                        <input type="email" name="email" placeholder="E-mail" class="all" id="email" autocomplete="off"
-                            required>
-                        <br>
-                        <textarea name="msg" placeholder="Your message" class="all" rows="10" cols="45" id="msg"
-                            required></textarea>
-                        <br>
-                        <input type="submit" name="submit" value="Send" class="send" id="send">
-                    </form>
-                    <div class="sent"></div>
-                </div>
-            </div>
-
-            <div class="down">
-                <p class="mail"><i class="fa-solid fa-envelope"></i> chauraj345r@gmail.com</p>
-                <div class="etc">
-                    <p class="oop">html, css, js as Frontend lang</p>
-                    <p class="oop">node.js as Backend lang</p>
-                    <p class="oop">Deployed/Hosted in heroku</p>
-                    <p class="copy">Raj chaulagain &copy; 2022 aka solo.linux</p>
-                </div>
-            </div>
-
-        </div>
-
+    <div class="media">
+      <p id="oo">
+        <a href="/login"
+          ><i class="fa-solid fa-copyright"></i> Raj chaulagain</a
+        >
+      </p>
+      <a href="https://www.facebook.com/solo.linux4u/" target="_blank">
+        <p><i class="fa-brands fa-facebook"></i> facebook/solo.linux4u/</p>
+      </a>
+      <a href="https://www.instagram.com/raj.3__/" target="_blank">
+        <p><i class="fa-brands fa-instagram"></i> instagram/raj.3__/</p>
+      </a>
+      <a href="https://github.com/sololinux" target="_blank">
+        <p><i class="fa-brands fa-github"></i> github/sololinux</p>
+      </a>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+    <div class="main">
+      <h1 style="display: none">
+        solo solo solo solo solo solo solo solo solo
+      </h1>
+      <p class="p">
+        <span class="solo">Solo </span><span class="linux">Linux</span><br />
+        Hey,<br /><br />
+        <i class="fa-solid fa-arrow-right"></i> I'm Solo (aka. Raj).<br />
+        <i class="fa-solid fa-arrow-right"></i> and I am learning to code,
+        <br />
+        <i class="fa-solid fa-arrow-right"></i> insanely, intrested in Cyber
+        Security, <br />
+        <i class="fa-solid fa-arrow-right"></i> dreaming to join Anonymous one
+        day.. hehe <br />
+        <i class="fa-solid fa-arrow-right"></i> I like Backend programming,
+        <br />
+        <i class="fa-solid fa-arrow-right"></i> but,
+        <span class="highl">not so good in Frontend</span>.
+      </p>
+    </div>
+    <div class="content"></div>
+
+    <div class="project" id="2">
+      <div class="pup">
+        <p class="lessi">
+          These are the projects I have done
+          <span class="spec">Previously.</span>
+        </p>
+        <p class="morei">
+          <span class="spec">Tap/Hover</span> to get details about them
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="row1">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img/solo-mail.png" alt="Solo Mail" />
+              </div>
+              <div class="flip-card-back">
+                <h2>Anonymous Mail sender</h2>
+                <p>Sends anonymous mail and multimails</p>
+                <p>Webapp made using node.js</p>
+                <div class="links">
+                  <a href="https://solomail.herokuapp.com" target="_blank">
+                    <p><i class="fa-brands fa-chrome"></i> Visit the Website</p>
+                  </a>
+                  <a
+                    href="https://github.com/sololinux/soloMail"
+                    target="_blank"
+                  >
+                    <p><i class="fa-brands fa-github"></i> Go to Github repo</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img/solo-login.png" alt="Solo Login" />
+              </div>
+              <div class="flip-card-back">
+                <h2>Login/Signup authentication</h2>
+                <p>
+                  Simple login/signup webapp with email verification and
+                  password hashing
+                </p>
+                <p>Webapp made using node.js and mongodb</p>
+                <div class="links">
+                  <a href="https://solologin.herokuapp.com" target="_blank">
+                    <p><i class="fa-brands fa-chrome"></i> Visit the Website</p>
+                  </a>
+                  <a
+                    href="https://github.com/sololinux/soloLogin"
+                    target="_blank"
+                  >
+                    <p><i class="fa-brands fa-github"></i> Go to Github repo</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img/bash-arch.png" alt="Bash-treminal" />
+              </div>
+              <div class="flip-card-back">
+                <h2>Linux terminal config</h2>
+                <p>Cool and nice looking linux terminal design</p>
+                <p>.bashrc made with bash</p>
+                <div class="links">
+                  <a
+                    href="https://github.com/sololinux/.bashrc"
+                    target="_blank"
+                  >
+                    <p><i class="fa-brands fa-github"></i> Go to Github repo</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="row2"> -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img/discord-bot.png" alt="Discord bot" />
+              </div>
+              <div class="flip-card-back">
+                <h2>Discord Bot</h2>
+                <p>Simple discord meme and joke bot</p>
+                <p>Made using python</p>
+                <div class="links">
+                  <a
+                    href="https://discord.com/oauth2/authorize?client_id=947876744965271582&scope=bot"
+                    target="_blank"
+                  >
+                    <p>
+                      <i class="fa-brands fa-discord"></i> Get the bot in your
+                      server
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img/ig.png" alt="Clone" />
+              </div>
+              <div class="flip-card-back">
+                <h2>InstaPost scraper</h2>
+                <p>
+                  Fetches instagram posts and views in html insta clone using
+                  Basic Display Api.
+                </p>
+                <p>Webapp made using node.js and Display Api</p>
+                <div class="links">
+                  <a
+                    href="https://github.com/sololinux/getInstaFeed"
+                    target="_blank"
+                  >
+                    <p><i class="fa-brands fa-github"></i> Go to Github repo</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="not">
+        <p>
+          Some of the project may not be working as I don't have time to
+          maintain them.. solo is bg
+        </p>
+      </div>
+    </div>
+
+    <div class="contact" id="3">
+      <div class="clip">
+        <p class="tag">Want to contact me, Leave a message</p>
+        <div class="form">
+          <form id="smsg">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              class="all"
+              id="name"
+              autocomplete="off"
+              required
+            />
+            <br />
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              class="all"
+              id="email"
+              autocomplete="off"
+              required
+            />
+            <br />
+            <textarea
+              name="msg"
+              placeholder="Your message"
+              class="all"
+              rows="10"
+              cols="45"
+              id="msg"
+              required
+            ></textarea>
+            <br />
+            <input
+              type="submit"
+              name="submit"
+              value="Send"
+              class="send"
+              id="send"
+            />
+          </form>
+          <div class="sent"></div>
+        </div>
+      </div>
+
+      <div class="down">
+        <p class="mail">
+          <i class="fa-solid fa-envelope"></i> chauraj345r@gmail.com
+        </p>
+        <div class="etc">
+          <p class="oop">html, css, js as Frontend lang</p>
+          <p class="oop">node.js as Backend lang</p>
+          <p class="oop">Deployed/Hosted in heroku</p>
+          <p class="copy">Raj chaulagain &copy; 2022 aka solo.linux</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
     <script src="script/clous.js"></script>
     <script src="script/ajax.js"></script>
-    <script async="async" data-cfasync="false" src="//upgulpinon.com/1?z=5314059"></script>
-    <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('glizauvo.net',5314054,document.createElement('script'))</script>
-    <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://inklinkor.com/tag.min.js',5314085,document.body||document.documentElement)</script>
-
-</body>
-
+    <!-- <script
+      async="async"
+      data-cfasync="false"
+      src="//upgulpinon.com/1?z=5314059"
+    ></script>  -->
+    <!-- <script>
+      (function (d, z, s) {
+        s.src = "https://" + d + "/401/" + z;
+        try {
+          (document.body || document.documentElement).appendChild(s);
+        } catch (e) {}
+      })("glizauvo.net", 5314054, document.createElement("script"));
+    </script>
+    <script>
+      (function (s, u, z, p) {
+        (s.src = u), s.setAttribute("data-zone", z), p.appendChild(s);
+      })(
+        document.createElement("script"),
+        "https://inklinkor.com/tag.min.js",
+        5314085,
+        document.body || document.documentElement
+      );
+    </script> -->
+  </body>
 </html>
