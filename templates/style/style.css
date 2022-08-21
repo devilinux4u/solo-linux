@@ -26,6 +26,7 @@ html {
 
 body {
   font-family: caveat_rg;
+  overflow-x: clip;
 }
 
 a {
@@ -90,6 +91,33 @@ a {
   color: #ff2600;
 }
 
+#intro .intro__container {
+  position: relative;
+}
+#intro .intro__container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -45%;
+  background: url("../img/Ellipse.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#intro .intro__container::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: -50%;
+  background: url("../img/Ellipse_2.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
 #intro .intro__container__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -141,4 +169,288 @@ a {
   border-radius: 1rem;
   transform: skew(-25deg);
   z-index: -1;
+}
+
+#skills .skills__container {
+  margin: 12rem 0 0 0;
+}
+#skills .skills__container__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+#skills .skills__container__grid__element__header .header {
+  font-size: clamp(4rem, 5vw, 8rem);
+}
+#skills .skills__container__grid__element .content {
+  margin: 2rem 0;
+  font-size: clamp(2rem, 2vw, 8rem);
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+}
+#skills .skills__container__grid__element .content .tagcloud--item:hover {
+  color: #ff7a00;
+}
+
+#projects .projects__container {
+  margin: 12rem 0 0 0;
+}
+#projects .projects__container__grid__element__header .header {
+  font-size: clamp(3rem, 5vw, 18rem);
+  text-align: center;
+}
+#projects .projects__container__grid__element__sub-header {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+#projects .projects__container__grid__element__sub-header .sub-header {
+  font-size: clamp(1rem, 2.5vw, 6rem);
+  font-weight: normal;
+}
+#projects .projects__container__grid__element__sub-header .sub-header .mark {
+  color: #ff7a00;
+}
+#projects .projects__container__grid__element__child {
+  margin: 5rem 3rem 2rem 3rem;
+}
+#projects .projects__container__grid__element__child .child__container {
+  background: linear-gradient(90deg, rgba(255, 122, 0, 0.5), rgba(245, 245, 220, 0.5));
+  padding: 3rem 3.5rem;
+  border-radius: 2rem;
+}
+#projects .projects__container__grid__element__child .child__container__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  row-gap: 3rem;
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container {
+  perspective: 10rem;
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner {
+  position: relative;
+  overflow: hidden;
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner:hover > .card__container__inner__back .card__container__inner__back__content {
+  top: 0%;
+  border-radius: 2rem;
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner:hover::after {
+  background: rgba(245, 245, 220, 0.9);
+  border-radius: 2rem;
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__front {
+  max-width: 100%;
+  height: 40vh;
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__front .card__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back {
+  width: 100%;
+  height: 100%;
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content {
+  padding: 2rem 3rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+  z-index: 2;
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content__header {
+  text-align: center;
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content__header .header {
+  font-size: clamp(2rem, 3vw, 6rem);
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content__para {
+  text-align: center;
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content__para .para {
+  font-size: clamp(1.5rem, 2.5vw, 6rem);
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content__links__link {
+  font-size: clamp(1.5rem, 2vw, 6rem);
+  color: #ff7a00;
+}
+#projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content__links__link:hover {
+  color: #ff2600;
+}
+#projects .projects__container__grid__element__para {
+  text-align: center;
+}
+#projects .projects__container__grid__element__para .para {
+  font-size: clamp(1.5rem, 2vw, 6rem);
+}
+
+#contact .contact__container {
+  margin: 12rem 0 0 0;
+}
+#contact .contact__container__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 0 3rem;
+}
+#contact .contact__container__grid__element__header {
+  text-align: center;
+}
+#contact .contact__container__grid__element__header .header {
+  font-size: clamp(1.5rem, 4.5vw, 6rem);
+}
+#contact .contact__container__grid__element__header .header .highlight {
+  color: #f5f5dc;
+  display: inline-block;
+  position: relative;
+}
+#contact .contact__container__grid__element__header .header .highlight::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 90%;
+  padding: 0rem 1.5rem;
+  background-color: #ff7a00;
+  border-radius: 1rem;
+  transform: skew(-25deg);
+  z-index: -1;
+}
+#contact .contact__container__grid__element__form {
+  margin: 8rem 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+#contact .contact__container__grid__element__form #form {
+  padding: 0 15rem;
+  grid-column: 1/1;
+  grid-row: 1/1;
+}
+#contact .contact__container__grid__element__form #form .form__container {
+  position: relative;
+  text-align: center;
+}
+#contact .contact__container__grid__element__form #form .form__container .input {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background-color: rgba(245, 245, 220, 0.5);
+  border: none;
+  border-radius: 8rem;
+  margin: 1.5rem 0;
+  font-family: inherit;
+  font-size: clamp(1.5rem, 2vw, 6rem);
+}
+#contact .contact__container__grid__element__form #form .form__container .input:not(:-moz-placeholder-shown).input:not(:focus) ~ .label {
+  top: -3%;
+  font-size: clamp(1rem, 2vw, 4rem);
+  color: #f5f5dc;
+}
+#contact .contact__container__grid__element__form #form .form__container .input:not(:-ms-input-placeholder).input:not(:focus) ~ .label {
+  top: -3%;
+  font-size: clamp(1rem, 2vw, 4rem);
+  color: #f5f5dc;
+}
+#contact .contact__container__grid__element__form #form .form__container .input:focus ~ .label, #contact .contact__container__grid__element__form #form .form__container .input:not(:placeholder-shown).input:not(:focus) ~ .label {
+  top: -3%;
+  font-size: clamp(1rem, 2vw, 4rem);
+  color: #f5f5dc;
+}
+#contact .contact__container__grid__element__form #form .form__container .label {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateX(-5%) translateY(-50%);
+  font-size: clamp(1.5rem, 2vw, 6rem);
+  transition: all 0.2s ease-in-out;
+}
+#contact .contact__container__grid__element__form #form .form__container .textarea {
+  border-radius: 2rem;
+  resize: none;
+}
+#contact .contact__container__grid__element__form #form .form__container .textarea:not(:-moz-placeholder-shown).input:not(:focus) ~ .textarea__label {
+  top: 0%;
+  font-size: clamp(1rem, 2vw, 4rem);
+  color: #f5f5dc;
+}
+#contact .contact__container__grid__element__form #form .form__container .textarea:not(:-ms-input-placeholder).input:not(:focus) ~ .textarea__label {
+  top: 0%;
+  font-size: clamp(1rem, 2vw, 4rem);
+  color: #f5f5dc;
+}
+#contact .contact__container__grid__element__form #form .form__container .textarea:focus ~ .textarea__label, #contact .contact__container__grid__element__form #form .form__container .textarea:not(:placeholder-shown).input:not(:focus) ~ .textarea__label {
+  top: 0%;
+  font-size: clamp(1rem, 2vw, 4rem);
+  color: #f5f5dc;
+}
+#contact .contact__container__grid__element__form #form .form__container .textarea__label {
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  transition: all 0.2s ease-in-out;
+}
+#contact .contact__container__grid__element__form #form .form__container .submit__btn {
+  padding: 2rem 5rem;
+  border: none;
+  border-radius: 2rem;
+  background: rgba(245, 245, 220, 0.5);
+  font-family: inherit;
+  font-size: clamp(1.5rem, 2vw, 6rem);
+  font-weight: bold;
+  cursor: pointer;
+}
+#contact .contact__container__grid__element__form__bg {
+  max-width: 100%;
+  grid-column: 1/1;
+  grid-row: 1/1;
+  z-index: -1;
+}
+#contact .contact__container__grid__element__form__bg .form__bg {
+  width: 100%;
+}
+
+#footer .footer__container {
+  margin-top: 12rem;
+  background: linear-gradient(0deg, #ff7a00, rgba(245, 245, 220, 0));
+}
+#footer .footer__container__grid__element__content {
+  text-align: center;
+}
+#footer .footer__container__grid__element__content__header .header {
+  font-size: clamp(1.5rem, 3vw, 6rem);
+}
+#footer .footer__container__grid__element__content__list .list .list__item {
+  font-size: clamp(1.5rem, 2vw, 6rem);
+}
+#footer .footer__container__grid__element .copyright {
+  margin-top: 3rem;
+}
+#footer .footer__container__grid__element .copyright .copy {
+  font-size: clamp(1.5rem, 2.5vw, 6rem);
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
