@@ -84,9 +84,10 @@ a {
 #navigator .navigator__container__grid__element .navigator__social__list__item__link {
   color: #ff7a00;
   font-size: clamp(2rem, 2.5vw, 5rem);
+  transition: all 0.2s ease-in-out;
 }
-#navigator .navigator__container__grid__element .navigator__social__list__item__link .fa {
-  color: #ff7a00;
+#navigator .navigator__container__grid__element .navigator__social__list__item__link:hover {
+  color: #ff2600;
 }
 
 #intro .intro__container__grid {
@@ -113,4 +114,31 @@ a {
   width: 100%;
   height: 20%;
   transform: translateX(-12.5%) translateY(30%);
+}
+#intro .intro__container__grid__element__sub-header {
+  margin: 1rem 0;
+}
+#intro .intro__container__grid__element__sub-header .sub-header {
+  font-size: clamp(2rem, 2.5vw, 6rem);
+}
+#intro .intro__container__grid__element__list .list__item__para {
+  font-size: clamp(2rem, 3.5vw, 8rem);
+}
+#intro .intro__container__grid__element__list .list__item__para .highlight {
+  color: #f5f5dc;
+  display: inline-block;
+  position: relative;
+}
+#intro .intro__container__grid__element__list .list__item__para .highlight::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105%;
+  height: 100%;
+  padding: 0rem 1.5rem;
+  background-color: #ff7a00;
+  border-radius: 1rem;
+  transform: skew(-25deg);
+  z-index: -1;
 }/*# sourceMappingURL=style.css.map */
