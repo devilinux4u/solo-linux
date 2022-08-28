@@ -65,14 +65,43 @@ a {
        column-gap: 3rem;
   margin: 1rem 3rem;
 }
+@media only screen and (max-width: 768px) {
+  #navigator .navigator__container__grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    margin: 1rem 0;
+  }
+}
 #navigator .navigator__container__grid__element:nth-child(1) {
   grid-column: 1/2;
+}
+@media only screen and (max-width: 768px) {
+  #navigator .navigator__container__grid__element:nth-child(1) {
+    grid-column: 1/-1;
+    grid-row: 1/1;
+  }
 }
 #navigator .navigator__container__grid__element:nth-child(2) {
   grid-column: 6/-1;
 }
-#navigator .navigator__container__grid__element .navigator__logo__link .logo {
+@media only screen and (max-width: 768px) {
+  #navigator .navigator__container__grid__element:nth-child(2) {
+    grid-column: 1/-1;
+    grid-row: 2/2;
+  }
+}
+#navigator .navigator__container__grid__element .navigator__logo__link__image {
+  max-width: 15%;
+  margin: 0 auto;
+}
+#navigator .navigator__container__grid__element .navigator__logo__link__image .logo {
   width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  #navigator .navigator__container__grid__element .navigator__logo__link__image .logo {
+    width: 100%;
+  }
 }
 #navigator .navigator__container__grid__element .navigator__social__list {
   list-style-type: none;
@@ -184,9 +213,14 @@ a {
 }
 #skills .skills__container__grid__element .content {
   margin: 2rem 0;
-  font-size: clamp(2rem, 2vw, 8rem);
+  font-size: clamp(1.5rem, 2vw, 8rem);
   font-family: "Montserrat", sans-serif;
   text-transform: capitalize;
+}
+#skills .skills__container__grid__element .content .tagcloud {
+  position: relative;
+  width: 100vw !important;
+  height: 80vh !important;
 }
 #skills .skills__container__grid__element .content .tagcloud--item:hover {
   color: #ff7a00;
@@ -218,12 +252,22 @@ a {
   padding: 3rem 3.5rem;
   border-radius: 2rem;
 }
+@media only screen and (max-width: 768px) {
+  #projects .projects__container__grid__element__child .child__container {
+    padding: 1.5rem 2rem;
+  }
+}
 #projects .projects__container__grid__element__child .child__container__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   -moz-column-gap: 3rem;
        column-gap: 3rem;
   row-gap: 3rem;
+}
+@media only screen and (max-width: 768px) {
+  #projects .projects__container__grid__element__child .child__container__grid {
+    grid-template-columns: 1fr;
+  }
 }
 #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container {
   perspective: 10rem;
