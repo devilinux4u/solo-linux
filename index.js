@@ -18,14 +18,14 @@ app.listen(port, () => {
 
 app.get("/", (req, res) => {
   res.render("index", {
-    pageTitle: "solo.linux | Raj Chaulagain",
-    imgpath: "home",
-    path: "home",
+    pageTitle: "Solo.linux | Raj Chaulagain",
   });
 });
 
 app.get("/login", (req, res) => {
-  res.render("login");
+  res.render("login", {
+    pageTitle: "Solo.linux | Login",
+  });
 });
 
 //----------------------------------------------------------------------------------//
