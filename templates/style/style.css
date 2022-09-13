@@ -1,0 +1,656 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: caveat_rg;
+  src: url(../fonts/caveat-regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: caveat_bold;
+  src: url(../fonts/caveat-bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: caveat_rg;
+  overflow-x: clip;
+}
+
+a {
+  text-decoration: none;
+}
+
+#nav {
+  position: fixed;
+  top: 50%;
+  width: 5%;
+  left: 2%;
+  transform: translateY(-50%) translateX(0);
+  background: #ff7a00;
+  padding: 2rem 0.8rem;
+  border-radius: 8rem;
+  z-index: 99;
+}
+@media only screen and (max-width: 26.5625em) {
+  #nav {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 90%;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-5%) translateY(0);
+    padding: 1rem 0.8rem;
+  }
+}
+#nav .nav__container__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
+  row-gap: 5rem;
+}
+@media only screen and (max-width: 26.5625em) {
+  #nav .nav__container__grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+#nav .nav__container__grid__element__image {
+  max-width: 100%;
+  margin: auto;
+}
+@media only screen and (max-width: 26.5625em) {
+  #nav .nav__container__grid__element__image {
+    max-width: 50%;
+  }
+}
+#nav .nav__container__grid__element__image .img {
+  width: 100%;
+}
+@media only screen and (max-width: 26.5625em) {
+  #nav .nav__container__grid__element__image .img {
+    width: 100%;
+  }
+}
+#nav .nav__container__grid__element__image .active {
+  fill: #f5f5dc;
+}
+
+#navigator .navigator__container__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  margin: 1rem 3rem;
+}
+@media only screen and (max-width: 48em) {
+  #navigator .navigator__container__grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    margin: 1rem 0;
+  }
+}
+#navigator .navigator__container__grid__element:nth-child(1) {
+  grid-column: 1/2;
+}
+@media only screen and (max-width: 48em) {
+  #navigator .navigator__container__grid__element:nth-child(1) {
+    grid-column: 1/-1;
+    grid-row: 1/1;
+  }
+}
+#navigator .navigator__container__grid__element:nth-child(2) {
+  grid-column: 6/-1;
+}
+@media only screen and (max-width: 48em) {
+  #navigator .navigator__container__grid__element:nth-child(2) {
+    grid-column: 1/-1;
+    grid-row: 2/2;
+  }
+}
+#navigator .navigator__container__grid__element .navigator__logo__link__image {
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 48em) {
+  #navigator .navigator__container__grid__element .navigator__logo__link__image {
+    max-width: 15%;
+  }
+}
+#navigator .navigator__container__grid__element .navigator__logo__link__image .logo {
+  width: 100%;
+}
+@media only screen and (max-width: 48em) {
+  #navigator .navigator__container__grid__element .navigator__logo__link__image .logo {
+    width: 100%;
+  }
+}
+#navigator .navigator__container__grid__element .navigator__social__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+#navigator .navigator__container__grid__element .navigator__social__list__item {
+  margin: 0 0.8rem;
+}
+#navigator .navigator__container__grid__element .navigator__social__list__item__link {
+  color: #ff7a00;
+  font-size: clamp(2rem, 2.5vw, 5rem);
+  transition: all 0.2s ease-in-out;
+}
+#navigator .navigator__container__grid__element .navigator__social__list__item__link:hover {
+  color: #ff2600;
+}
+
+.intro #intro {
+  padding-bottom: 15rem;
+}
+.intro #intro .intro__container {
+  position: relative;
+}
+.intro #intro .intro__container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -45%;
+  background: url("../img/Ellipse.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+@media only screen and (max-width: 48em) {
+  .intro #intro .intro__container::before {
+    top: -90%;
+  }
+}
+.intro #intro .intro__container::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: -50%;
+  background: url("../img/Ellipse_2.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+.intro #intro .intro__container__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.intro #intro .intro__container__grid__element {
+  text-align: center;
+}
+.intro #intro .intro__container__grid__element__header {
+  font-size: clamp(3rem, 5vw, 18rem);
+}
+.intro #intro .intro__container__grid__element__header .header {
+  position: relative;
+}
+.intro #intro .intro__container__grid__element__header .header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background: url("../img/path.svg");
+  background-size: 25% 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 20%;
+  transform: translateX(-12.5%) translateY(30%);
+}
+.intro #intro .intro__container__grid__element__sub-header {
+  margin: 1rem 0;
+}
+.intro #intro .intro__container__grid__element__sub-header .sub-header {
+  font-size: clamp(2rem, 2.5vw, 6rem);
+}
+.intro #intro .intro__container__grid__element__list .list__item__para {
+  font-size: clamp(2rem, 3.5vw, 8rem);
+}
+.intro #intro .intro__container__grid__element__list .list__item__para .highlight {
+  color: #f5f5dc;
+  display: inline-block;
+  position: relative;
+}
+.intro #intro .intro__container__grid__element__list .list__item__para .highlight::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105%;
+  height: 100%;
+  padding: 0rem 1.5rem;
+  background-color: #ff7a00;
+  border-radius: 1rem;
+  transform: skew(-25deg);
+  z-index: -1;
+}
+
+.skills #skills {
+  padding-bottom: 15rem;
+}
+.skills #skills .skills__container__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.skills #skills .skills__container__grid__element__header .header {
+  font-size: clamp(4rem, 5vw, 8rem);
+}
+.skills #skills .skills__container__grid__element .content {
+  margin: 2rem 0;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+}
+.skills #skills .skills__container__grid__element .content .tagcloud {
+  position: relative;
+  width: 100vw !important;
+  height: 80vh !important;
+}
+.skills #skills .skills__container__grid__element .content .tagcloud--item {
+  font-size: clamp(1.5rem, 2vw, 8rem);
+}
+.skills #skills .skills__container__grid__element .content .tagcloud--item:hover {
+  color: #ff7a00;
+}
+
+.projects #projects {
+  padding-bottom: 15rem;
+}
+.projects #projects .projects__container__grid__element__header .header {
+  font-size: clamp(3rem, 5vw, 18rem);
+  text-align: center;
+}
+.projects #projects .projects__container__grid__element__sub-header {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.projects #projects .projects__container__grid__element__sub-header .sub-header {
+  font-size: clamp(1.5rem, 2.5vw, 6rem);
+  font-weight: normal;
+}
+.projects #projects .projects__container__grid__element__sub-header .sub-header .mark {
+  color: #ff7a00;
+}
+.projects #projects .projects__container__grid__element__child {
+  margin: 5rem 3rem 2rem 3rem;
+}
+@media only screen and (max-width: 48em) {
+  .projects #projects .projects__container__grid__element__child {
+    margin: 3rem 1.5rem 2rem 1.5rem;
+  }
+}
+.projects #projects .projects__container__grid__element__child .child__container {
+  background: linear-gradient(90deg, rgba(255, 122, 0, 0.5), rgba(245, 245, 220, 0.5));
+  padding: 3rem 3.5rem;
+  border-radius: 2rem;
+}
+@media only screen and (max-width: 48em) {
+  .projects #projects .projects__container__grid__element__child .child__container {
+    padding: 1.5rem 2rem;
+  }
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  row-gap: 3rem;
+}
+@media only screen and (max-width: 48em) {
+  .projects #projects .projects__container__grid__element__child .child__container__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container {
+  perspective: 10rem;
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner {
+  position: relative;
+  overflow: hidden;
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner:hover > .card__container__inner__back .card__container__inner__back__content {
+  top: 0%;
+  border-radius: 2rem;
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner:hover::after {
+  background: rgba(245, 245, 220, 0.9);
+  border-radius: 2rem;
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__front {
+  max-width: 100%;
+  height: 40vh;
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__front .card__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back {
+  width: 100%;
+  height: 100%;
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content {
+  padding: 2rem 3rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+  z-index: 2;
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content__header {
+  text-align: center;
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content__header .header {
+  font-size: clamp(2.3rem, 3vw, 6rem);
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content__para {
+  text-align: center;
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content__para .para {
+  font-size: clamp(2rem, 2.5vw, 6rem);
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content__links__link {
+  font-size: clamp(2rem, 2vw, 6rem);
+  color: #ff7a00;
+}
+.projects #projects .projects__container__grid__element__child .child__container__grid__element__card .card__container__inner__back__content__links__link:hover {
+  color: #ff2600;
+}
+.projects #projects .projects__container__grid__element__para {
+  text-align: center;
+}
+.projects #projects .projects__container__grid__element__para .para {
+  font-size: clamp(1.5rem, 2vw, 6rem);
+}
+
+.contact #contact {
+  padding-bottom: 15rem;
+}
+.contact #contact .contact__container__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 0 3rem;
+}
+@media only screen and (max-width: 48em) {
+  .contact #contact .contact__container__grid {
+    margin: 0 1rem;
+  }
+}
+.contact #contact .contact__container__grid__element__header {
+  text-align: center;
+}
+.contact #contact .contact__container__grid__element__header .header {
+  font-size: clamp(3rem, 4.5vw, 6rem);
+}
+.contact #contact .contact__container__grid__element__header .header .highlight {
+  color: #f5f5dc;
+  display: inline-block;
+  position: relative;
+}
+.contact #contact .contact__container__grid__element__header .header .highlight::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 90%;
+  padding: 0rem 1.5rem;
+  background-color: #ff7a00;
+  border-radius: 1rem;
+  transform: skew(-25deg);
+  z-index: -1;
+}
+.contact #contact .contact__container__grid__element__form {
+  margin: 8rem 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+@media only screen and (max-width: 48em) {
+  .contact #contact .contact__container__grid__element__form {
+    overflow: hidden;
+    overflow: 2rem 0 0 0;
+  }
+}
+.contact #contact .contact__container__grid__element__form #form {
+  padding: 0 15rem;
+  grid-column: 1/1;
+  grid-row: 1/1;
+}
+@media only screen and (max-width: 48em) {
+  .contact #contact .contact__container__grid__element__form #form {
+    padding: 0 1.5rem;
+  }
+}
+.contact #contact .contact__container__grid__element__form #form .form__container {
+  position: relative;
+  text-align: center;
+}
+.contact #contact .contact__container__grid__element__form #form .form__container .input {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background-color: rgba(245, 245, 220, 0.5);
+  border: none;
+  border-radius: 8rem;
+  margin: 1.5rem 0;
+  font-family: inherit;
+  font-size: clamp(1.5rem, 2vw, 6rem);
+}
+.contact #contact .contact__container__grid__element__form #form .form__container .input:not(:-moz-placeholder-shown).input:not(:focus) ~ .label {
+  top: -3%;
+  font-size: clamp(1rem, 2vw, 4rem);
+  color: #f5f5dc;
+}
+.contact #contact .contact__container__grid__element__form #form .form__container .input:not(:-ms-input-placeholder).input:not(:focus) ~ .label {
+  top: -3%;
+  font-size: clamp(1rem, 2vw, 4rem);
+  color: #f5f5dc;
+}
+.contact #contact .contact__container__grid__element__form #form .form__container .input:focus ~ .label, .contact #contact .contact__container__grid__element__form #form .form__container .input:not(:placeholder-shown).input:not(:focus) ~ .label {
+  top: -3%;
+  font-size: clamp(1rem, 2vw, 4rem);
+  color: #f5f5dc;
+}
+.contact #contact .contact__container__grid__element__form #form .form__container .label {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateX(-5%) translateY(-50%);
+  font-size: clamp(1.5rem, 2vw, 6rem);
+  transition: all 0.2s ease-in-out;
+}
+.contact #contact .contact__container__grid__element__form #form .form__container .textarea {
+  border-radius: 2rem;
+  resize: none;
+}
+.contact #contact .contact__container__grid__element__form #form .form__container .textarea:not(:-moz-placeholder-shown).input:not(:focus) ~ .textarea__label {
+  top: 0%;
+  font-size: clamp(1rem, 2vw, 4rem);
+  color: #f5f5dc;
+}
+.contact #contact .contact__container__grid__element__form #form .form__container .textarea:not(:-ms-input-placeholder).input:not(:focus) ~ .textarea__label {
+  top: 0%;
+  font-size: clamp(1rem, 2vw, 4rem);
+  color: #f5f5dc;
+}
+.contact #contact .contact__container__grid__element__form #form .form__container .textarea:focus ~ .textarea__label, .contact #contact .contact__container__grid__element__form #form .form__container .textarea:not(:placeholder-shown).input:not(:focus) ~ .textarea__label {
+  top: 0%;
+  font-size: clamp(1rem, 2vw, 4rem);
+  color: #f5f5dc;
+}
+.contact #contact .contact__container__grid__element__form #form .form__container .textarea__label {
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  transition: all 0.2s ease-in-out;
+}
+.contact #contact .contact__container__grid__element__form #form .form__container .submit__btn {
+  padding: 2rem 5rem;
+  border: none;
+  border-radius: 2rem;
+  background: rgba(245, 245, 220, 0.5);
+  font-family: inherit;
+  font-size: clamp(1.5rem, 2vw, 6rem);
+  font-weight: bold;
+  cursor: pointer;
+}
+.contact #contact .contact__container__grid__element__form__bg {
+  max-width: 100%;
+  grid-column: 1/1;
+  grid-row: 1/1;
+  z-index: -1;
+}
+@media only screen and (max-width: 48em) {
+  .contact #contact .contact__container__grid__element__form__bg {
+    max-width: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.contact #contact .contact__container__grid__element__form__bg .form__bg {
+  width: 100%;
+}
+@media only screen and (max-width: 48em) {
+  .contact #contact .contact__container__grid__element__form__bg .form__bg {
+    width: 200%;
+  }
+}
+
+.login__container__grid__element__header {
+  text-align: center;
+  font-size: clamp(2rem, 3.5vw, 5rem);
+  padding: 5rem 0 3rem 0;
+}
+.login__container__grid__element .login__form {
+  margin: auto;
+  width: 100%;
+  padding: 5rem 25rem 15.5rem 25rem;
+}
+@media only screen and (max-width: 48em) {
+  .login__container__grid__element .login__form {
+    padding: 5rem 2rem 9rem 2rem;
+  }
+}
+@media only screen and (max-width: 26.5625em) {
+  .login__container__grid__element .login__form {
+    padding: 5rem 2rem 9rem 2rem;
+  }
+}
+.login__container__grid__element .login__form .form {
+  display: flex;
+  flex-direction: column;
+  grid-template-rows: repeat(3, -webkit-max-content);
+  grid-template-rows: repeat(3, max-content);
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 2rem;
+}
+.login__container__grid__element .login__form .form .input {
+  padding: 1rem 1.5rem;
+  background-color: #f6e9c7;
+  border: none;
+  border-radius: 5rem;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 1.8vw, 3rem);
+}
+.login__container__grid__element .login__form .form .input::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 1.8vw, 3rem);
+}
+.login__container__grid__element .login__form .form .input:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 1.8vw, 3rem);
+}
+.login__container__grid__element .login__form .form .input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 1.8vw, 3rem);
+}
+.login__container__grid__element .login__form .form #submit {
+  padding: 1rem;
+  background-color: #f6e9c7;
+  border: none;
+  border-radius: 8rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: clamp(1.8rem, 1.8vw, 3rem);
+}
+.login__container__grid__element .error {
+  font-size: clamp(1.5rem, 2.8vw, 3rem);
+  text-align: center;
+  color: rgb(255, 73, 73);
+  font-weight: bolder;
+}
+
+#footer .footer__container {
+  background: linear-gradient(0deg, #ff7a00, rgba(245, 245, 220, 0));
+}
+#footer .footer__container__grid__element__content {
+  text-align: center;
+}
+#footer .footer__container__grid__element__content__header .header {
+  font-size: clamp(1.5rem, 3vw, 6rem);
+}
+#footer .footer__container__grid__element__content__list .list .list__item {
+  font-size: clamp(1.5rem, 2vw, 6rem);
+}
+#footer .footer__container__grid__element .copyright {
+  margin-top: 3rem;
+}
+#footer .footer__container__grid__element .copyright .copy {
+  font-size: clamp(1.5rem, 2.5vw, 6rem);
+  text-align: center;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
