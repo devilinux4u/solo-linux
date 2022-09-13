@@ -1,11 +1,22 @@
-const section = document.querySelectorAll(".section");
+const sections = document.querySelectorAll("section");
 const img = document.querySelectorAll(".img");
 
-window.addEventListener("scroll", () => {
-  section.forEach((_, i) => {
-    if (section[i].getBoundingClientRect().top >= scrollY) {
-      img[i].src = img[i].dataset.secondsrc;
-      img[i].src = img[i].dataset.src;
-    }
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.7,
+};
+
+let observer = new IntersectionObserver(check, options);
+
+function check(checks) {
+  checks.forEach((check, i) => {
+    const className = check.target.className;
+    console.log(className);
   });
+  // console.log(checks);
+}
+
+sections.forEach((section) => {
+  observer.observe(section);
 });
